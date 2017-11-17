@@ -1,8 +1,8 @@
 // Ashley Sanders
-// Algorithm based off of Daniel Shiffmans Smart Rocket
+// Based off of Daniel Shiffmans Smart Rockets 
 
 var population;
-var lifespan = 400;
+var lifespan = 500;
 var lifeP;
 var count = 0;
 var target;
@@ -11,33 +11,59 @@ var iterations = 1;
 var wins = 0;
 var firstGen = 0;
 
-var rx = 120;
-var ry = 150;
-var rw = 50;
+var ran = Math.floor((Math.random() * 550) + 50);
+var ranX = Math.floor((Math.random() * 350) + 50);
+var ranY = Math.floor((Math.random() * 100) + 50);
+
+var rx = Math.floor((Math.random() * 350) + 100);
+var ry = Math.floor((Math.random() * 300) + 50);
+var rw = Math.floor((Math.random() * 120) + 50);
 var rh = 10;
-var r1x = 200;
-var r1y = 150;
-var r1w = 50;
+var r1x = Math.floor((Math.random() * 350) + 100);
+var r1y = Math.floor((Math.random() * 300) + 50);
+var r1w = Math.floor((Math.random() * 120) + 50);
 var r1h = 10;
-var r2x = 280;
-var r2y = 150;
-var r2w = 50;
+var r2x = Math.floor((Math.random() * 350) + 100);
+var r2y = Math.floor((Math.random() * 300) + 50);
+var r2w = Math.floor((Math.random() * 120) + 50);
 var r2h = 10;
-var r3x = 360;
-var r3y = 150;
-var r3w = 50;
+var r3x = Math.floor((Math.random() * 350) + 100);
+var r3y = Math.floor((Math.random() * 300) + 50);
+var r3w = Math.floor((Math.random() * 120) + 50);
 var r3h = 10;
-var r4x = 440;
-var r4y = 150;
-var r4w = 50;
+var r4x = Math.floor((Math.random() * 350) + 100);
+var r4y = Math.floor((Math.random() * 300) + 50);
+var r4w = Math.floor((Math.random() * 120) + 50);
 var r4h = 10;
+var r5x = Math.floor((Math.random() * 350) + 100);
+var r5y = Math.floor((Math.random() * 300) + 50);
+var r5w = Math.floor((Math.random() * 120) + 50);
+var r5h = 10;
+var r6x = Math.floor((Math.random() * 350) + 100);
+var r6y = Math.floor((Math.random() * 300) + 50);
+var r6w = Math.floor((Math.random() * 120) + 50);
+var r6h = 10;
+var r7x = Math.floor((Math.random() * 350) + 100);
+var r7y = Math.floor((Math.random() * 300) + 50);
+var r7w = Math.floor((Math.random() * 120) + 50);
+var r7h = 10;
+var r8x = Math.floor((Math.random() * 350) + 100);
+var r8y = Math.floor((Math.random() * 300) + 50);
+var r8w = Math.floor((Math.random() * 120) + 50);
+var r8h = 10;
+var r9x = Math.floor((Math.random() * 350) + 100);
+var r9y = Math.floor((Math.random() * 300) + 50);
+var r9w = Math.floor((Math.random() * 120) + 50);
+var r9h = 10;
 
 function setup() {
   createCanvas(600, 400);
   rocket = new Rocket();
   population = new Population();
   lifeP = createP();
-  target = createVector(width / 2, 50);
+  var x = Math.floor((Math.random() * 300) + 100);
+  var y = Math.floor((Math.random() * 200) + 50);
+  target = createVector(x, y);
 
 }
 
@@ -55,12 +81,17 @@ function draw() {
     iterations += 1;
   }
   
-  fill(255,48,48);
+  fill(255);
   rect(rx, ry, rw, rh);
   rect(r1x, r1y, r1w, r1h);
   rect(r2x, r2y, r2w, r2h);
   rect(r3x, r3y, r3w, r3h);
   rect(r4x, r4y, r4w, r4h);
+  rect(r5x, r5y, r5w, r5h);
+  rect(r6x, r6y, r6w, r6h);
+  rect(r7x, r7y, r7w, r7h);
+  rect(r8x, r8y, r8w, r8h);
+  rect(r9x, r9y, r9w, r9h);
   fill(0,128,0);
   ellipse(target.x, target.y, 16, 16);
 }
@@ -209,6 +240,21 @@ function Rocket(dna) {
       this.crashed = true;
     }
       if (this.pos.x > r4x && this.pos.x < r4x + r4w && this.pos.y > r4y && this.pos.y < r4y + r4h) {
+      this.crashed = true;
+    }
+      if (this.pos.x > r5x && this.pos.x < r5x + r5w && this.pos.y > r5y && this.pos.y < r5y + r5h) {
+      this.crashed = true;
+    }
+      if (this.pos.x > r6x && this.pos.x < r6x + r6w && this.pos.y > r6y && this.pos.y < r6y + r6h) {
+      this.crashed = true;
+    }
+      if (this.pos.x > r7x && this.pos.x < r7x + r7w && this.pos.y > r7y && this.pos.y < r7y + r7h) {
+      this.crashed = true;
+    }
+      if (this.pos.x > r8x && this.pos.x < r8x + r8w && this.pos.y > r8y && this.pos.y < r8y + r8h) {
+      this.crashed = true;
+    }
+      if (this.pos.x > r9x && this.pos.x < r9x + r9w && this.pos.y > r9y && this.pos.y < r9y + r9h) {
       this.crashed = true;
     }
     
