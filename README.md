@@ -9,3 +9,5 @@ Runs iterations based on 400 frames
 Fitness is calculated based on best range and/or reaching of target
 
 DNA is crossed-over and mutated naturally and added to a mating pool for the next generation
+
+See it in action https://ashleysanders.co.za/genetic/run.html
