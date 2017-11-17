@@ -1,6 +1,5 @@
-// Coding Rainbow
-// Daniel Shiffman
-// https://youtube.com/shiffman
+// Ashley Sanders
+// Algorithm based off of Daniel Shiffmans Smart Rocket
 
 var population;
 var lifespan = 400;
